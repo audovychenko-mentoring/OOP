@@ -8,15 +8,16 @@ namespace MentoringTasks.Farm.FarmMembers
 {
     class Cow: Animal, Cattle
     {
-        int lifeLength = 4000;
-        String sound = "Mooo";
-        String[] food = { "grass", "corn", "grain" };
-        int age = 0;
-        String name;
+        private int lifeLength = 400;
+        private String sound = "Mooo";
+        private String[] food = { "grass", "corn", "grain" };
+        public int age = 0;
+        private String name;
+        public int milkProduced = 0;
 
         public Cow(string name)
         {
-            this.name = name;
+            this.name = name;           
         }
 
         public void eat()
@@ -35,9 +36,10 @@ namespace MentoringTasks.Farm.FarmMembers
             return lifeLength - age;
         }
 
-        public void givingMilk()
+        public int givingMilk(int daysPass)
         {
-            throw new NotImplementedException();
+            milkProduced += daysPass * 5;
+            return daysPass*5;
         }
 
         public void makeNoise()
@@ -48,6 +50,11 @@ namespace MentoringTasks.Farm.FarmMembers
         public void sleep()
         {
             Console.WriteLine("Zzzzz");
+        }
+
+        public int getAge()
+        {
+            return age;
         }
     }
 }

@@ -11,5 +11,7 @@ namespace MentoringTasks
         public int gettingOlder(int daysPass);
         public void sleep();
         public string getName();
-      }
+
+        public int getAge();
+    }
 }

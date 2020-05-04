@@ -21,16 +21,40 @@ namespace MentoringTasks
                 if (myFarm[i].gettingOlder(daysPass) <= 0)
                 {
                     myFarm.RemoveAt(i);
+                    i--;
                 }
-                else continue;
+            }
+            checkFarmLifetimeStatus();
+        }
+
+        public void checkAnimalsAlive()
+        {
+            Console.WriteLine($"Farm members:");
+            foreach (Animal animal in myFarm)
+            {
+                Console.WriteLine(animal.getName() +" age: "+ animal.getAge());
+            }
+            Console.WriteLine(Environment.NewLine);
+        }
+
+        public void checkFarmLifetimeStatus()
+        {
+            if (myFarm.Count == 0)
+            {
+                Console.WriteLine("The Farm is empty");
+                Environment.Exit(1);
             }
         }
 
-        public void checkStatus()
+        public void selectAnimalsByAge(int minTargetAge, int maxTargetAge)
         {
-            foreach (Animal animal in myFarm)
+            Console.WriteLine($"Farm members who are older than {minTargetAge} but younger than {maxTargetAge}:");
+            for (int i = 0; i < myFarm.Count; i++)
             {
-                Console.WriteLine(animal.getName());
+                if (myFarm[i].getAge() > minTargetAge && myFarm[i].getAge() <= maxTargetAge)
+                {                    
+                    Console.WriteLine(myFarm[i].getName());
+                }            
             }
             Console.WriteLine(Environment.NewLine);
         }

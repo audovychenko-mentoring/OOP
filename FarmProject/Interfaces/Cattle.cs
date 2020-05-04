@@ -6,6 +6,6 @@ namespace MentoringTasks.Farm.Interfaces
 {
     interface Cattle
     {
-        public void givingMilk();
+        public int givingMilk(int daysPast);
     }
 }

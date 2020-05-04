@@ -6,14 +6,15 @@ namespace MentoringTasks.Farm.FarmMembers
 {
     class Chicken:Animal, Bird
     {
-        int lifeLength = 150;
-        String sound = "Co Co Co";
-        String[] food = { "mash", "crumble", "pellets" };
-        int age = 0;
-        String name;
+        private int lifeLength = 150;
+        private String sound = "Co Co Co";
+        private String[] food = { "mash", "crumble", "pellets" };
+        public int age = 0;
+        private String name;
+        public int eggsProduced = 0;
 
         public Chicken(String name)
-        {
+        { 
             this.name = name;
         }
 
@@ -37,9 +38,10 @@ namespace MentoringTasks.Farm.FarmMembers
             Console.WriteLine("Co co co");
         }
 
-        public void produceEggs()
+        public int produceEggs(int daysPass)
         {
-            throw new NotImplementedException();
+            eggsProduced += daysPass * 3;
+            return daysPass * 5;
         }
 
         public int gettingOlder(int daysPass)
@@ -51,6 +53,11 @@ namespace MentoringTasks.Farm.FarmMembers
         public string getName()
         {
             return name;
+        }
+
+        public int getAge()
+        {
+            return age;
         }
     }
 }

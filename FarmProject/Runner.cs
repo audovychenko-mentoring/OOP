@@ -15,12 +15,13 @@ namespace MentoringTasks
             myFarm.addFarmMembers(cindy);
             milla.makeNoise();
             myFarm.timePass(120);
-            myFarm.checkStatus();
+            myFarm.checkAnimalsAlive();
             Chicken melissa = new Chicken("Melisa");
             myFarm.addFarmMembers(melissa);
-            myFarm.checkStatus();
-            myFarm.timePass(120);
-            myFarm.checkStatus();
+            myFarm.selectAnimalsByAge(0, 200);
+            myFarm.checkAnimalsAlive();
+            myFarm.timePass(400);
+            myFarm.checkAnimalsAlive();
         }
     }
 }

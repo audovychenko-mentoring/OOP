@@ -7,6 +7,6 @@ namespace MentoringTasks
     interface Bird
     {
         public void fly();
-        public void produceEggs();
+        public int produceEggs(int daysPast);
     }
 }

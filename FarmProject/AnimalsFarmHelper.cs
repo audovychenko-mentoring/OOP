@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MentoringTasks
 {
-    class AnimalsFarm
+    class AnimalsFarmHelper
     {
         private List<Animal> myFarm = new List<Animal>();
 

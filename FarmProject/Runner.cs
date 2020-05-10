@@ -1,5 +1,4 @@
-﻿using MentoringTasks.Farm;
-using MentoringTasks.Farm.FarmMembers;
+﻿using MentoringTasks.FarmProject.FarmMembers;
 using System;
 
 namespace MentoringTasks
@@ -8,7 +7,7 @@ namespace MentoringTasks
     {
         static void Main(string[] args)
         {
-            AnimalsFarm myFarm = new AnimalsFarm();
+            AnimalsFarmHelper myFarm = new AnimalsFarmHelper();
             Cow milla = new Cow("Milla");
             Chicken cindy = new Chicken("Cindy");            
             myFarm.addFarmMembers(milla);

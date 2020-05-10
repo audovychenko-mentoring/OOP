@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MentoringTasks
+namespace MentoringTasks.FarmProject.Interfaces
 {
     interface Bird
     {
-        public void fly();
-        public int produceEggs(int daysPast);
+        public abstract void fly();
     }
 }

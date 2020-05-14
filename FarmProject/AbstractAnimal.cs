@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MentoringTasks.FarmProject
 {
-    abstract class CommonAnimalsMethods : Animal
+    abstract class AbstractAnimal : Animal
     {
         protected int lifeLength;
         protected String sound;
@@ -15,25 +15,26 @@ namespace MentoringTasks.FarmProject
 
         public void eat()
         {
-            Console.WriteLine("Om nom nom");
+            Random rand = new Random();
+            int index = rand.Next(food.Length);
+            Console.WriteLine(getName() + $"eating {food[index]} Om nom nom");
         }
 
-        public int gettingOlder(int daysPass)
+        public void gettingOlder(int daysPass)
         {
             age += daysPass;
-            return lifeLength - age;
         }
 
         public abstract int givingProduce(int daysPast);
 
         public void makeNoise()
         {
-            Console.WriteLine(sound);
+            Console.WriteLine("I am " + getName() + "and I'm talking like" + sound);
         }
 
         public void sleep()
         {
-            Console.WriteLine("Zzzzz");
+            Console.WriteLine(getName() + " doing zzzzzz ");
         }
 
         public int getAge()

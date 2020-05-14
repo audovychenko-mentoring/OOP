@@ -8,7 +8,7 @@ namespace MentoringTasks
     {
         public void makeNoise();
         public void eat();
-        public int gettingOlder(int daysPass);
+        public void gettingOlder(int daysPass);
         public void sleep();
         public string getName();
         public int getAge();

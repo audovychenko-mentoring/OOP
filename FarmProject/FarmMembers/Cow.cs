@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MentoringTasks.FarmProject.FarmMembers
 {
-    class Cow: CommonAnimalsMethods, Cattle
+    class Cow: AbstractAnimal, Cattle
     {
         public int producedMilk = 0;
 

@@ -1,4 +1,5 @@
 ﻿
+using MentoringTasks.FarmProject.FarmMembers;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,24 +8,16 @@ namespace MentoringTasks
 {
     class AnimalsFarmHelper
     {
-        private List<Animal> myFarm = new List<Animal>();
+        public List<Animal> myFarm = new List<Animal>();
 
         public void addFarmMembers(Animal animal)
         {
             myFarm.Add(animal);
         }
 
-        public void timePass(int daysPass)
+        internal void doDailyRoutine()
         {
-            for (int i = 0; i < myFarm.Count; i++)
-            {
-                if (myFarm[i].gettingOlder(daysPass) <= 0)
-                {
-                    myFarm.RemoveAt(i);
-                    i--;
-                }
-            }
-            checkFarmLifetimeStatus();
+            throw new NotImplementedException();
         }
 
         public void checkAnimalsAlive()
@@ -37,13 +30,9 @@ namespace MentoringTasks
             Console.WriteLine(Environment.NewLine);
         }
 
-        public void checkFarmLifetimeStatus()
+        public bool isFarmEmpty()
         {
-            if (myFarm.Count == 0)
-            {
-                Console.WriteLine("The Farm is empty");
-                Environment.Exit(1);
-            }
+            return (myFarm.Count == 0);          
         }
 
         public void selectAnimalsByAge(int minTargetAge, int maxTargetAge)
@@ -57,6 +46,17 @@ namespace MentoringTasks
                 }            
             }
             Console.WriteLine(Environment.NewLine);
+        }
+
+        public void fillFarmWithAnimals()
+        {
+            AnimalsFarmHelper myFarm = new AnimalsFarmHelper();
+            Cow milla = new Cow("Milla");
+            Chicken cindy = new Chicken("Cindy");
+            myFarm.addFarmMembers(new Cow("Milla"));
+            myFarm.addFarmMembers(cindy);
+            Chicken melissa = new Chicken("Melisa");
+            myFarm.addFarmMembers(melissa);
         }
     }
 }

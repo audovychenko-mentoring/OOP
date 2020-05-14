@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MentoringTasks.FarmProject.FarmMembers
 {
-    class Chicken: CommonAnimalsMethods, Bird
+    class Chicken: AbstractAnimal, Bird
     {
         public int producedEggs = 0;
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MentoringTasks.FarmProject.FarmMembers
 {
-    class Pig: CommonAnimalsMethods
+    class Pig: AbstractAnimal
     {
         public int producedMeat = 0;
 

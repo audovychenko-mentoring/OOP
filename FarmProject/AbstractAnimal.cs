@@ -17,7 +17,7 @@ namespace MentoringTasks.FarmProject
         {
             Random rand = new Random();
             int index = rand.Next(food.Length);
-            Console.WriteLine(getName() + $"eating {food[index]} Om nom nom");
+            Console.WriteLine(getName() + $" eating {food[index]} ...... Om nom nom");
         }
 
         public void gettingOlder(int daysPass)
@@ -29,7 +29,7 @@ namespace MentoringTasks.FarmProject
 
         public void makeNoise()
         {
-            Console.WriteLine("I am " + getName() + "and I'm talking like" + sound);
+            Console.WriteLine("I am " + getName() + " and I'm talking like " + sound);
         }
 
         public void sleep()
@@ -45,6 +45,11 @@ namespace MentoringTasks.FarmProject
         public string getName()
         {
             return name;
+        }
+
+        public int getLifeLength()
+        {
+            return lifeLength;
         }
     }
 }

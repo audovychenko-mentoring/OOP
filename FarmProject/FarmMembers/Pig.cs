@@ -11,7 +11,7 @@ namespace MentoringTasks.FarmProject.FarmMembers
         public Pig(String name)
         {
             this.name = name;
-            lifeLength = 150;
+            lifeLength = 20;
             sound = "";
             food = new String[3] { "mash", "crumble", "pellets" };
             age = 0;

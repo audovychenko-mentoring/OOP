@@ -12,5 +12,6 @@ namespace MentoringTasks
         public void sleep();
         public string getName();
         public int getAge();
+        public int getLifeLength();
     }
 }

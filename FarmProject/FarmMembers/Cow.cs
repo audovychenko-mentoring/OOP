@@ -13,7 +13,7 @@ namespace MentoringTasks.FarmProject.FarmMembers
         public Cow(string name)
         {
             this.name = name;
-            lifeLength = 400;
+            lifeLength = 25;
             sound = "Mooo";
             food = new String[3] { "grass", "corn", "grain" };
             age = 0;

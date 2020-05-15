@@ -15,11 +15,6 @@ namespace MentoringTasks
             myFarm.Add(animal);
         }
 
-        internal void doDailyRoutine()
-        {
-            throw new NotImplementedException();
-        }
-
         public void checkAnimalsAlive()
         {
             Console.WriteLine($"Farm members:");
@@ -28,6 +23,19 @@ namespace MentoringTasks
                 Console.WriteLine(animal.getName() +" age: "+ animal.getAge());
             }
             Console.WriteLine(Environment.NewLine);
+        }
+
+        public void farmDeadAnimalsCollector()
+        {
+            for (int i = 0; i < myFarm.Count; i++)
+            {
+                if (myFarm[i].getAge() >= myFarm[i].getLifeLength())
+                {
+                    Console.WriteLine("!!! " + myFarm[i].getName() + " is dead, sorry");
+                    myFarm.RemoveAt(i);               
+                    i--;
+                }
+            }
         }
 
         public bool isFarmEmpty()
@@ -50,13 +58,9 @@ namespace MentoringTasks
 
         public void fillFarmWithAnimals()
         {
-            AnimalsFarmHelper myFarm = new AnimalsFarmHelper();
-            Cow milla = new Cow("Milla");
-            Chicken cindy = new Chicken("Cindy");
-            myFarm.addFarmMembers(new Cow("Milla"));
-            myFarm.addFarmMembers(cindy);
-            Chicken melissa = new Chicken("Melisa");
-            myFarm.addFarmMembers(melissa);
+            addFarmMembers(new Cow("Milla"));
+            addFarmMembers(new Chicken("Cindy"));
+            addFarmMembers(new Chicken("Melisa"));
         }
     }
 }

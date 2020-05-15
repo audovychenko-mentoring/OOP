@@ -12,7 +12,7 @@ namespace MentoringTasks.FarmProject.FarmMembers
         public Chicken(String name)
         {
              this.name = name;
-             lifeLength = 150;
+             lifeLength = 15;
              sound = "Co Co Co";
              food = new String[3] { "mash", "crumble", "pellets" };
              age = 0;             

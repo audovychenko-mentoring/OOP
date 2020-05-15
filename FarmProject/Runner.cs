@@ -11,18 +11,21 @@ namespace MentoringTasks
         {
             AnimalsFarmHelper myBrandNewFarm = new AnimalsFarmHelper();
             myBrandNewFarm.fillFarmWithAnimals();
-            while (myBrandNewFarm.isFarmEmpty())
+            int daysCount = 1;
+            while (!myBrandNewFarm.isFarmEmpty())
             {
-            int daysPass = 1;            
+                Console.WriteLine("Day " + daysCount);
                 foreach (Animal animal in myBrandNewFarm.myFarm) 
                 {
                     animal.makeNoise();
                     animal.eat();
                     animal.sleep();
-                    animal.gettingOlder(daysPass);
+                    animal.gettingOlder(1);
                 }
-            daysPass++;
+                myBrandNewFarm.farmDeadAnimalsCollector();
+                daysCount++;
             }
+            Console.WriteLine("Farm stoped functioning. There are no animals");
         }
     }
 }

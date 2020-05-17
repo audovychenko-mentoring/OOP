@@ -13,5 +13,6 @@ namespace MentoringTasks
         public string getName();
         public int getAge();
         public int getLifeLength();
+        public int givingProduce(int daysPast);
     }
 }

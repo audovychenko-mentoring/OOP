@@ -6,9 +6,16 @@ using System.Text;
 
 namespace MentoringTasks
 {
-    class AnimalsFarmHelper
+    class AnimalsFarm
     {
         public List<Animal> myFarm = new List<Animal>();
+
+        public AnimalsFarm (List<Animal> animal)
+        {
+            myFarm.AddRange(animal);
+        }
+
+        public AnimalsFarm() {   }
 
         public void addFarmMembers(Animal animal)
         {
@@ -54,13 +61,6 @@ namespace MentoringTasks
                 }            
             }
             Console.WriteLine(Environment.NewLine);
-        }
-
-        public void fillFarmWithAnimals()
-        {
-            addFarmMembers(new Cow("Milla"));
-            addFarmMembers(new Chicken("Cindy"));
-            addFarmMembers(new Chicken("Melisa"));
         }
     }
 }

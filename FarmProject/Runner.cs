@@ -7,10 +7,12 @@ namespace MentoringTasks
 {
     class Runner
     {
-        static void Main(string[] args)
+        static void TestMain(string[] args)
         {
-            AnimalsFarmHelper myBrandNewFarm = new AnimalsFarmHelper();
-            myBrandNewFarm.fillFarmWithAnimals();
+            AnimalsFarm myBrandNewFarm = new AnimalsFarm();
+            myBrandNewFarm.addFarmMembers(new Cow("Milla"));
+            myBrandNewFarm.addFarmMembers(new Chicken("Cindy"));
+            myBrandNewFarm.addFarmMembers(new Chicken("Melisa"));
             int daysCount = 1;
             while (!myBrandNewFarm.isFarmEmpty())
             {
@@ -21,6 +23,7 @@ namespace MentoringTasks
                     animal.eat();
                     animal.sleep();
                     animal.gettingOlder(1);
+                    animal.givingProduce(1);
                 }
                 myBrandNewFarm.farmDeadAnimalsCollector();
                 daysCount++;

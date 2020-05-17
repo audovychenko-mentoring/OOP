@@ -17,7 +17,7 @@ namespace MentoringTasks.FarmProject.FarmMembers
             sound = "Mooo";
             food = new String[3] { "grass", "corn", "grain" };
             age = 0;
-    }
+        }
 
         public override int givingProduce(int daysPass)
         {

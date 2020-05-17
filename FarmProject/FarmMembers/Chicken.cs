@@ -21,7 +21,7 @@ namespace MentoringTasks.FarmProject.FarmMembers
         public override int givingProduce(int daysPass)
         {
             producedEggs += daysPass * 3;
-            return daysPass * 5;
+            return daysPass * 3;
         }
 
         public void fly()

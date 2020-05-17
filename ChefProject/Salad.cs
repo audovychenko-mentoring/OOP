@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
@@ -7,26 +8,59 @@ namespace MentoringTasks.ChefProject
 {
     class Salad
     {
-        List<Vegetable> MySalad = new List<Vegetable>();
+        private List<Vegetable> mySalad = new List<Vegetable>();
         private double mySaladCaloricity;
         private string name;
 
-        public Salad(List<Vegetable> vegetable, string name) 
+        public Salad(List<Vegetable> vegetable, string name)
         {
             this.name = name;
-            MySalad.AddRange(vegetable);
+            mySalad.AddRange(vegetable);
             mySaladCaloricity = 0;
             foreach (Vegetable justAddedVegetable in vegetable)
             {
-                mySaladCaloricity = mySaladCaloricity + justAddedVegetable.SetCalories(justAddedVegetable.GetWeith());
+                mySaladCaloricity = mySaladCaloricity + justAddedVegetable.SetCalories(justAddedVegetable.Weigth);
             }
         }
 
-        //public Salad() { }
+        public Salad() { }
 
         public void getSaladCaloricity()
         {
             Console.WriteLine($"There are {mySaladCaloricity} calories in {getName()}");
+        }
+
+        public void sortByCalories()
+        {
+            List<Vegetable> SortedVegetables = mySalad.OrderBy(o => o.Caloricity).ToList();
+            Console.WriteLine(getName() + " salad ingredients sorted by calories:");
+            foreach (Vegetable vegetable in SortedVegetables)
+            {                
+                Console.WriteLine(vegetable.Name + " has " + vegetable.Caloricity + " calories");
+            }
+        }
+
+        public void sortByWeigth()
+        {
+            List<Vegetable> SortedVegetables = mySalad.OrderBy(o => o.Weigth).ToList();
+            Console.WriteLine(getName() + " salad ingredients sorted by weigth:");
+            foreach (Vegetable vegetable in SortedVegetables)
+            {
+                Console.WriteLine(vegetable.Name + " has " + vegetable.Weigth + " weigth");
+            }
+        }
+
+        public void selectVegetablesByWeigth(int minTargetWeigth, int maxTargetWeigth)
+        {
+            Console.WriteLine($"{getName()} ingredients that heavier than {minTargetWeigth} but lighter than {maxTargetWeigth}:");
+            for (int i = 0; i < mySalad.Count; i++)
+            {
+                if (mySalad[i].Weigth > minTargetWeigth && mySalad[i].Weigth <= maxTargetWeigth)
+                {
+                    Console.WriteLine(mySalad[i].Name);
+                }
+            }
+            Console.WriteLine(Environment.NewLine);
         }
 
         public string getName()

@@ -10,7 +10,7 @@ namespace MentoringTasks.ChefProject.Vegetables
         {
             this.weigth = weigth;
             caloriesPerOneGram = 0.3;
-            string name = "Lime";
+            name = "Lime";
         }
     }
 }

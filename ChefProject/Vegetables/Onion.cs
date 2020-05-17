@@ -11,7 +11,7 @@ namespace MentoringTasks.ChefProject
         {
             this.weigth = weigth;
             caloriesPerOneGram = 0.42;
-            string name = "Onion";
+            name = "Onion";
         }
     }
 }

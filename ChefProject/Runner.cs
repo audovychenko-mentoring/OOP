@@ -15,6 +15,9 @@ namespace MentoringTasks.ChefProject
             Salad tangySalad = new Salad(tangySaladIngredients, "Tangy Salad");
             springSalad.getSaladCaloricity();
             tangySalad.getSaladCaloricity();
+            springSalad.sortByCalories();
+            springSalad.sortByWeigth();
+            tangySalad.selectVegetablesByWeigth(40, 150) ;
         }
     }
 }

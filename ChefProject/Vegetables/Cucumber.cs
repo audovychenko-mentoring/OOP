@@ -11,7 +11,7 @@ namespace MentoringTasks.ChefProject
         {
             this.weigth = weigth;
             caloriesPerOneGram = 0.15;
-            string name = "Cucumber";
+            name = "Cucumber";
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MentoringTasks.ChefProject.Vegetables
 {
-    class AbstractVegetable : Vegetable
+    abstract class AbstractVegetable : Vegetable
     {
         public double caloriesPerOneGram;
         public int weigth;

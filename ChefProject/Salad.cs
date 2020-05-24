@@ -12,12 +12,12 @@ namespace MentoringTasks.ChefProject
         private double mySaladCaloricity;
         private string name;
 
-        public Salad(List<Vegetable> vegetable, string name)
+        public Salad(List<Vegetable> vegetables, string name)
         {
             this.name = name;
-            mySalad.AddRange(vegetable);
+            mySalad.AddRange(vegetables);
             mySaladCaloricity = 0;
-            foreach (Vegetable justAddedVegetable in vegetable)
+            foreach (Vegetable justAddedVegetable in vegetables)
             {
                 mySaladCaloricity = mySaladCaloricity + justAddedVegetable.SetCalories(justAddedVegetable.Weigth);
             }

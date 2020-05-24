@@ -14,7 +14,6 @@ namespace MentoringTasks.Collections
                 Random random = new Random();
                 QueueExample.Enqueue(random.NextDouble());
             }
-            Console.WriteLine(QueueExample);
         }
         public void FindAndPrintFirstElement()
         {

@@ -15,7 +15,6 @@ namespace MentoringTasks.Collections
                 Random random = new Random();
                 ListExample.Add(random.NextDouble());
             }
-            Console.WriteLine(ListExample);
         }
 
         public void FindAndPrintValueByPosition(int position)

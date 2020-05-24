@@ -26,8 +26,7 @@ namespace MentoringTasks.Collections
                     str_build.Append(letter);
                 }
                 DictionaryExample.Add(i, str_build.ToString());
-            }
-            Console.WriteLine(DictionaryExample);
+            }            
         }
         public void FindAndPrintValueByKey(int key)
         {

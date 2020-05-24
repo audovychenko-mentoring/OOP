@@ -26,7 +26,6 @@ namespace MentoringTasks.Collections
                 }
                 SortedListExample.Add(i, str_build.ToString());
             }
-            Console.WriteLine(SortedListExample);
         }
         public void FindAndPrintValueByKey(int key)
         {

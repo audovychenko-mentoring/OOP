@@ -14,7 +14,6 @@ namespace MentoringTasks.Collections
                 Random random = new Random();
                 StackExample.Push(random.NextDouble());
             }
-            Console.WriteLine(StackExample);
         }
         public void FindAndPrintTopElement()
         {

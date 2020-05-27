@@ -11,13 +11,11 @@ namespace MentoringTasks.Collections
         Dictionary<int, string> DictionaryExample = new Dictionary<int, string>();
         public void FillCollection()
         {
+            StringBuilder str_build = new StringBuilder();
+            Random random = new Random();
+            char letter;
             for (int i = 0; i < 7000; i++)
-            {
-                StringBuilder str_build = new StringBuilder();
-                Random random = new Random();
-
-                char letter;
-
+            {             
                 for (int j = 0; j < 10; j++)
                 {
                     double flt = random.NextDouble();

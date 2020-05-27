@@ -14,18 +14,22 @@ namespace MentoringTasks.ChefProject
             dictionaryCollection.FillCollection();
             dictionaryCollection.FindAndPrintValueByKey(6);
             dictionaryCollection.RemoveElementByKey(100);
+
             ListCollection listCollection = new ListCollection();            
             listCollection.FillCollection();
             listCollection.FindAndPrintValueByPosition(600);
             listCollection.RemoveElementByPosition(250);
+
             QueueCollection queueCollection = new QueueCollection();
             queueCollection.FillCollection();
             queueCollection.FindAndPrintFirstElement();
             queueCollection.RemoveBeginningElement();
+
             SortedListCollection sortedListCollection = new SortedListCollection();
             sortedListCollection.FillCollection();
             sortedListCollection.FindAndPrintValueByKey(300);
             sortedListCollection.RemoveElementByKey(1000);
+
             StackCollection stackCollection = new StackCollection();
             stackCollection.FillCollection();
             stackCollection.FindAndPrintTopElement();

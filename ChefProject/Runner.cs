@@ -2,6 +2,8 @@
 using MentoringTasks.Collections;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
 using System.Text;
 
 namespace MentoringTasks.ChefProject
@@ -11,29 +13,32 @@ namespace MentoringTasks.ChefProject
         public static void Main(string[] args)
         {
             DictionaryCollection dictionaryCollection = new DictionaryCollection();
-            dictionaryCollection.FillCollection();
-            dictionaryCollection.FindAndPrintValueByKey(6);
-            dictionaryCollection.RemoveElementByKey(100);
-
-            ListCollection listCollection = new ListCollection();            
-            listCollection.FillCollection();
-            listCollection.FindAndPrintValueByPosition(600);
-            listCollection.RemoveElementByPosition(250);
-
+            ListCollection listCollection = new ListCollection();
             QueueCollection queueCollection = new QueueCollection();
-            queueCollection.FillCollection();
-            queueCollection.FindAndPrintFirstElement();
-            queueCollection.RemoveBeginningElement();
-
             SortedListCollection sortedListCollection = new SortedListCollection();
-            sortedListCollection.FillCollection();
-            sortedListCollection.FindAndPrintValueByKey(300);
-            sortedListCollection.RemoveElementByKey(1000);
-
             StackCollection stackCollection = new StackCollection();
+
+            dictionaryCollection.FillCollection("dictionary");
+            listCollection.FillCollection();
+            queueCollection.FillCollection();
+            sortedListCollection.FillCollection("sorted list");
             stackCollection.FillCollection();
-            stackCollection.FindAndPrintTopElement();
+            Console.WriteLine();
+
+            dictionaryCollection.FindValueByKey(6, "dictionary");
+            listCollection.FindValueByPosition(600);
+            queueCollection.FindFirstElement();
+            sortedListCollection.FindValueByKey(300, "sorted list");
+            stackCollection.FindTopElement();
+            Console.WriteLine();
+
+            dictionaryCollection.RemoveElementByKey(100, "dictionary");                       
+            listCollection.RemoveElementByPosition(250);        
+            queueCollection.RemoveBeginningElement();
+            sortedListCollection.RemoveElementByKey(1000, "sorted list");
             stackCollection.RemoveTopElement();
+            Console.WriteLine();
+
             /*List<Vegetable> springSaladIngredients = new List<Vegetable>() 
             { 
                 new Tomato(200), 
